@@ -1,3 +1,5 @@
+let isValid=false;
+
 let listaEmpleados = [];
 
 const objEmpleado = {
@@ -13,7 +15,7 @@ const objEmpleado = {
 
 let editando = false;
 
-const formulario = document.querySelector('#formulario');
+const formulario3 = document.querySelector('#formulario');
 const nombreInput = document.querySelector('#nombre');
 const apellidoInput = document.querySelector('#apellido');
 const cedulaInput = document.querySelector('#cedula');
@@ -24,9 +26,9 @@ const horaInput = document.querySelector('#hora');
 
 const btnAgregar = document.querySelector('#btnAgregar');
 
-formulario.addEventListener('submit', validarFormulario);
+formulario3.addEventListener('submit', validarFormulario2);
 
-function validarFormulario(e) {
+function validarFormulario2(e) {
     e.preventDefault();
 
     // if (nombreInput.value === '' || apellidoInput.value === '') {
@@ -41,6 +43,12 @@ function validarFormulario(e) {
 
         editando = false;
     }else {
+        
+    }
+}
+
+function validarFormulario3(callBack) {
+    console.log('hello again');
         objEmpleado.id = Date.now();
         objEmpleado.nombre = nombreInput.value;
         objEmpleado.apellido = apellidoInput.value;
@@ -50,9 +58,14 @@ function validarFormulario(e) {
         objEmpleado.fecha = fechaInput.value;
         objEmpleado.hora = horaInput.value;
 
+        if (isValid) {
+            console.log(objEmpleado, 'ladsjflkjads');
+            agregarEmpleado();
 
-        agregarEmpleado();
-    }
+            isValid=false;
+            return callBack();
+        }
+
 }
 
 function agregarEmpleado() {
@@ -84,13 +97,13 @@ function mostrarEmpleados() {
 
     limpiarHTML();
 
-    const divEmpleados = document.querySelector('.div-empleados');
+    const divEmpleados = document.querySelector('.div-citas');
 
     listaEmpleados.forEach(empleado => {
         const {id, nombre, apellido, cedula, correo, telefono, fecha, hora} = empleado;
 
         const parrafo = document.createElement('p');
-        parrafo.textContent = `${id} ${nombre} - ${apellido} - ${cedula} - ${correo} - ${telefono} - ${fecha} - ${hora}`;
+        parrafo.textContent = `${nombre} - ${apellido} - ${cedula} - ${correo} - ${telefono} - ${fecha} - ${hora}`;
         parrafo.dataset.id = id;
 
         const editarBoton = document.createElement('button');
@@ -129,7 +142,7 @@ function cargarEmpleado(empleado) {
 
     objEmpleado.id = id;
 
-    formulario.querySelector('button[type="submit"]').textContent = 'Actualizar';
+    formulario3.querySelector('button[type="submit"]').textContent = 'Actualizar';
 
     editando = true;
 }
@@ -165,9 +178,9 @@ function editarEmpleado() {
     limpiarHTML();
     mostrarEmpleados();
 
-    formulario.reset();
+    formulario3.reset();
 
-    formulario.querySelector('button[type="submit"]').textContent = 'Agregar';
+    formulario3.querySelector('button[type="submit"]').textContent = 'Agregar';
 
     editando = false;
 }
@@ -181,7 +194,7 @@ function eliminarEmpleado(id) {
 }
 
 function limpiarHTML() {
-    const divEmpleados = document.querySelector('.div-empleados');
+    const divEmpleados = document.querySelector('.div-citas');
 
     while(divEmpleados.firstChild){
         divEmpleados.removeChild(divEmpleados.firstChild);
