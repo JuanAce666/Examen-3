@@ -7,10 +7,50 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/citas.css">
     <link rel="stylesheet" href="./styles/prueba.css">
+    <link rel="stylesheet" href="./styles/estilosHome.css">
     <title>Citas</title>
 </head>
 <body>
+    <header>
+        <style>
+            .navbar {
+              justify-content: space-between;
+              align-items: center;
+            }
+        
+            .navbar-brand {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+        
+            .navbar-brand img {
+              max-width: 150px;
+              height: auto;
+            }
+          </style>
+        </head>
+            <a class="navbar-brand bg-dark" href="#">
+                <img class="logo" src="img/footer.png" alt="Logo de mi negocio">
+            </a>
+          <nav class="navbar navbar-expand-md navbar-light bg-dark ">
+            <div class="container d-flex justify-content-center">
+              <ul class="navbar-nav d-flex justify-content-around">
+                <div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Inicio</a>
+                    </li>
+                </div>
+                <div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./citas.html" target="_blank">Citas</a>
+                    </li>
+                </div>
+            </div>
+          </nav>
+        
 
+    </header>
 
     <div class="contenedor">
 
@@ -111,58 +151,39 @@
         </div>
 
     </div>
-    
-    <!-- <div class="div-titulo">
-        <h1>Citas</h1>
-    </div>
-    
-    <div class="contenedor">
-
-        <div class="div-formulario">
-            <h2>Formulario</h2>
-
-            <form action="#" id="formulario">
-                <input required type="text" id="nombre" placeholder="Ingresa un nombre">
-                <input required type="text" id="apellido" placeholder="Ingresa apellido">
-                <input required type="number" id="cedula" placeholder="Ingresa cedula">
-                <input required type="email" id="correo" placeholder="Ingresa correo">
-                <input required type="number" id="telefono" placeholder="Ingresa telefono">
-                <input required type="date" id="fecha" placeholder="Ingresa fecha">
-                <select required class="form-select" aria-label="Default select example" id="hora">
-                    <option selected>Seleccione una hora</option>
-                    <option value="8am">8:00 am</option>
-                    <option value="9am">9:00 am</option>
-                    <option value="10am">10:00 am</option>
-                    <option value="11am">11:00 am</option>
-                    <option value="12pm">12:00 pm</option>
-                    <option value="1pm">1:00 pm</option>
-                    <option value="2pm">2:00 pm</option>
-                    <option value="3pm">3:00 pm</option>
-                    <option value="4pm">4:00 pm</option>
-                    <option value="5pm">5:00 pm</option>
-                  </select>
-                <button type="submit" id="btnAgregar">Agregar</button>
-            </form>
-        </div>
-
-        <div class="div-listado">
-            <h2>Listado de Citas</h2>
-            <div class="div-empleados">
-                
-            </div>
-        </div>
-
-    </div> -->
-
-
-
-
-
-
-
-
-
-
+    <footer>
+        <section class="contenedorP">
+            <section class="contenedor1">
+                <h3>Desarrolladores</h3>
+                <a href="https://github.com/MachadoMateo" target="_blank"><p>Mateo Machado</p></a>
+                <a href="https://github.com/JuanAce666" target="_blank"><p>Juan Acevedo</p></a>
+                <a href="https://github.com/isantiagojaramillo" target="_blank"><p>Santiago Jaramillo</p></a>
+                <a href="https://github.com/SaulAMP" target="_blank"><p>Saúl Arcángel Molina Peña</p></a>
+            </section>
+            <section class="contenedor2">
+                <h3>Estamos en :</h3>
+                <p>Direccion:Cl. 49 #41-9, La Candelaria</p>
+                <p>Medellín, Antioquia</p>
+                <p>Telefono : (604) 2291100</p>
+                <p>Te Esperamos !</p>
+            </section>
+            <section class="contenedor3">
+                <h3>Redes Sociales</h3>
+                <a href=""><section class="bo">
+                    <img src="./img/logo instagram.png" alt="">
+                    <p>Instagram</p>
+                </section></a>
+                <a href=""><section class="bo">
+                    <img src="./img/logo facebook.png" alt="">
+                    <p>Facebook</p>
+                </section></a>
+                <a href="https://wa.link/94avuc"><section class="bo">
+                    <img src="./img/logo whatsapp.png" alt="">
+                    <p>Whatsapp</p>
+                </section></a>
+            </section>
+        </section>
+    </footer>
     <script src="./controllers/app.js"></script>
     <script src="./controllers/validador.js"></script>
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
