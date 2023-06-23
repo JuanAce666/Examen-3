@@ -7,8 +7,8 @@ const formulario2=document.getElementById('formulario')
 const inputs2 = document.querySelectorAll('#formulario')
 
 const expresiones = {
-	nombre: /^[a-zA-ZÀ-ÿ\s]{10, 15}$/, // Letras y espacios, pueden llevar acentos.
-    apellido: /^[a-zA-ZÀ-ÿ\s]{10, 15}$/, // Letras y espacios, pueden llevar acentos.
+	nombre: /^[a-zA-ZÀ-ÿ\s]{10}$/, // Letras y espacios, pueden llevar acentos.
+    apellido: /^[a-zA-ZÀ-ÿ\s]{10}$/, // Letras y espacios, pueden llevar acentos.
     cedula: /^\d{10}$/, // 10 numeros.
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 	telefono: /^\d{10}$/ // 10 numeros.
